@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bc9c84ca-3bbc-436a-9bf9-5a3efa7bf3af" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/mathe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/model/OnSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/model/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/AbstractSearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/ParallelSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/SearchBackwardsThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/SearchThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/SequencialSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/util/TestUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/view/MainWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/view/MainWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset/a7.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2VuLbe5giw1N411JZhA2JGtImWW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/mathe/projetos/pesquisa-arquivos/src/main/resources/dataset",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "proofread",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mathe\projetos\pesquisa-arquivos\src\main\resources\dataset" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.unesc.pesquisa.services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.unesc.pesquisa.Main" />
+      <module name="pesquisa-arquivos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unesc.pesquisa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc9c84ca-3bbc-436a-9bf9-5a3efa7bf3af" name="Changes" comment="" />
+      <created>1695681098279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695681098279</updated>
+      <workItem from="1695681099289" duration="12478000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
