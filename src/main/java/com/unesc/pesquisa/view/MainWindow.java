@@ -2,6 +2,7 @@ package com.unesc.pesquisa.view;
 
 import com.unesc.pesquisa.model.OnSearch;
 import com.unesc.pesquisa.model.SearchResult;
+import com.unesc.pesquisa.model.SearchType;
 import com.unesc.pesquisa.util.TestUtils;
 
 import javax.swing.*;
@@ -17,12 +18,12 @@ public class MainWindow extends JFrame {
     private JPanel panel;
     private JTextField folderField;
     private JButton findButton;
-    private JCheckBox useParallelCheckbox;
     private JButton searchButton;
     private JTextField searchValueField;
     private JProgressBar progressBar;
     private JButton testsButton;
     private JTable table;
+    private JComboBox<SearchType> typeCombobox;
     private final DefaultTableModel tableModel = new DefaultTableModel(
             new Object[]{"Nome", "Arquivo", "Tempo médio (ns)", "Linha"}, 0
     );
@@ -51,14 +52,13 @@ public class MainWindow extends JFrame {
     private void onSearch(ActionEvent event) {
         String folder = folderField.getText();
         String value = searchValueField.getText();
-        boolean useParallel = useParallelCheckbox.isSelected();
 
         if (validate(folder, value)) return;
 
         progressBar.setVisible(true);
 
         new Thread(() -> {
-            SearchResult result = onSearch.search(folder, value, useParallel);
+            SearchResult result = onSearch.search(folder, value, (SearchType) typeCombobox.getSelectedItem());
             progressBar.setVisible(false);
             JOptionPane.showMessageDialog(this, !result.isFound() ? "Pesquisa não encontrada!" : result);
         }).start();
@@ -105,8 +105,8 @@ public class MainWindow extends JFrame {
 
     private void runTests(int numberOfTests) {
         String folder = folderField.getText();
-        boolean useParallel = useParallelCheckbox.isSelected();
-        String logFileName = useParallel ? "test_results_parallel.csv" : "test_results.csv";
+        SearchType searchType = (SearchType) typeCombobox.getSelectedItem();
+        String logFileName = searchType.name() + ".csv";
 
         if (folder.isBlank()) {
             JOptionPane.showMessageDialog(this, "Pasta não informada!");
@@ -142,7 +142,7 @@ public class MainWindow extends JFrame {
                     long soma = 0;
 
                     for (int j = 0; j < numberOfTests; j++) {
-                        result = onSearch.search(folder, name, useParallel);
+                        result = onSearch.search(folder, name, searchType);
                         soma += result.getSearchTime();
                         String csv = "\n" +
                                 result.getTerm() + ";" +
@@ -176,5 +176,9 @@ public class MainWindow extends JFrame {
 
             progressBar.setVisible(false);
         }).start();
+    }
+
+    private void createUIComponents() {
+        typeCombobox = new JComboBox<>(SearchType.values());
     }
 }

@@ -5,6 +5,7 @@ import com.unesc.pesquisa.model.SearchResult;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class SearchThread extends Thread {
 
@@ -21,16 +22,14 @@ public class SearchThread extends Thread {
     @Override
     public void run() {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
-            int row = 1;
-            String line;
+            AtomicInteger row = new AtomicInteger(1);
 
-            while ((line = bufferedReader.readLine()) != null) {
+            bufferedReader.lines().forEach(line -> {
                 if (line.trim().equals(term)) {
-                    parallelSearch.notifyFound(this, new SearchResult(file.getName(), term, row));
+                    parallelSearch.notifyFound(this, new SearchResult(file.getName(), term, row.get()));
                 }
-                row++;
-//                parallelSearch.incrementLinesTraveled();
-            }
+                row.getAndIncrement();
+            });
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

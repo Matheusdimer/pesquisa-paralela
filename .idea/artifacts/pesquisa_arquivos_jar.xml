@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pesquisa-arquivos:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pesquisa_arquivos_jar</output-path>
+    <root id="archive" name="pesquisa-arquivos.jar">
+      <element id="module-output" name="pesquisa-arquivos" />
+    </root>
+  </artifact>
+</component>

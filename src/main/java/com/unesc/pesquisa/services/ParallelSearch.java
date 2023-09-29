@@ -12,6 +12,11 @@ public class ParallelSearch extends AbstractSearchService {
     private SearchResult searchResult;
     private final Set<Thread> threadPoll = ConcurrentHashMap.newKeySet();
     private int linesTraveled = 0;
+    private boolean useBackwards = false;
+
+    public ParallelSearch(boolean useBackwards) {
+        this.useBackwards = useBackwards;
+    }
 
     @Override
     protected SearchResult runSearch(String folder, String term) {
@@ -28,9 +33,11 @@ public class ParallelSearch extends AbstractSearchService {
                 threadPoll.add(searchThread);
                 searchThread.start();
 
-//                SearchBackwardsThread searchBackwardsThread = new SearchBackwardsThread(this, textFile, term);
-//                threadPoll.add(searchBackwardsThread);
-//                searchBackwardsThread.start();
+                if (useBackwards) {
+                    SearchBackwardsThread searchBackwardsThread = new SearchBackwardsThread(this, textFile, term);
+                    threadPoll.add(searchBackwardsThread);
+                    searchBackwardsThread.start();
+                }
             }
 
             for (Thread thread : threadPoll) {

@@ -60,10 +60,15 @@ public class SearchResult {
 
     @Override
     public String toString() {
-        return String.format("""
+        String message = String.format("""
                         Termo %s encontrado no arquivo %s na linha %s
-                        Tempo de execução: %s ns (nano segundos)
-                        Linhas percorridas: %d""",
-                term, file, row, NumberFormat.getInstance().format(searchTime), linesTraveled);
+                        Tempo de execução: %s ns (nano segundos)""",
+                term, file, row, NumberFormat.getInstance().format(searchTime));
+
+        if (linesTraveled > 0) {
+            message += "Linhas percorridas: " + linesTraveled;
+        }
+
+        return message;
     }
 }
