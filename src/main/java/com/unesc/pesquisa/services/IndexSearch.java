@@ -15,7 +15,7 @@ public class IndexSearch extends AbstractSearchService {
     protected SearchResult runSearch(String folder, String term) {
         try {
             if (searcher == null) {
-                searcher = new Searcher(folder);
+                searcher = new Searcher(folder + "/index");
             }
 
             TopDocs docs = searcher.search(term);

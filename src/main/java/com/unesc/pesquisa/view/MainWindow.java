@@ -93,6 +93,7 @@ public class MainWindow extends JFrame {
 
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             folderField.setText(chooser.getSelectedFile().toString());
+            indexFiles();
         }
     }
 

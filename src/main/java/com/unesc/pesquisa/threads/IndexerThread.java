@@ -21,14 +21,13 @@ public class IndexerThread extends Thread {
     @Override
     public void run() {
         try {
-            File[] indexFiles = new File(folder).listFiles((dir, name) -> !name.endsWith(".txt"));
+            File indexFolder = new File(folder + "/index");
 
-            // Remove os arquivos de indexação para re-indexar
-            for (File file : indexFiles) {
-                file.delete();
+            if (indexFolder.isDirectory()) {
+                FileUtils.deleteDirectory(indexFolder);
             }
 
-            Indexer indexer = new Indexer(folder);
+            Indexer indexer = new Indexer(folder + "/index");
             indexer.createIndex(folder);
             indexer.close();
             window.setVisible(false);
