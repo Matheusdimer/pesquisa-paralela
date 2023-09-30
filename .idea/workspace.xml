@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc9c84ca-3bbc-436a-9bf9-5a3efa7bf3af" name="Changes" comment="Implementação de pesquisa com indexação via Apache Lucene.">
+    <list default="true" id="bc9c84ca-3bbc-436a-9bf9-5a3efa7bf3af" name="Changes" comment="Ajuste para separar arquivos de indexação em pasta.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/IndexSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/services/IndexSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/threads/IndexerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/threads/IndexerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/view/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unesc/pesquisa/view/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dataset/a5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dataset/a5.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +99,7 @@
       <updated>1695681098279</updated>
       <workItem from="1695681099289" duration="15397000" />
       <workItem from="1696027852905" duration="11727000" />
-      <workItem from="1696108648635" duration="744000" />
+      <workItem from="1696108648635" duration="1070000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <option name="closed" value="true" />
@@ -129,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696039028512</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajuste para separar arquivos de indexação em pasta.">
+      <option name="closed" value="true" />
+      <created>1696109811818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696109811818</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +143,8 @@
     <MESSAGE value="Initial commit." />
     <MESSAGE value="ComboBox para seleção de algoritmo de pesquisa." />
     <MESSAGE value="Implementação de pesquisa com indexação via Apache Lucene." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação de pesquisa com indexação via Apache Lucene." />
+    <MESSAGE value="Ajuste para separar arquivos de indexação em pasta." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste para separar arquivos de indexação em pasta." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
