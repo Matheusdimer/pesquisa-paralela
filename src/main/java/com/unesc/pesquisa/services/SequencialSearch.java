@@ -1,6 +1,7 @@
 package com.unesc.pesquisa.services;
 
 import com.unesc.pesquisa.model.SearchResult;
+import com.unesc.pesquisa.util.TxtFilter;
 
 import java.io.*;
 
@@ -11,7 +12,7 @@ public class SequencialSearch extends AbstractSearchService {
     @Override
     protected SearchResult runSearch(String folder, String term) {
         File fileFolder = new File(folder);
-        File[] textFiles = fileFolder.listFiles((dir, name) -> name.endsWith(".txt"));
+        File[] textFiles = fileFolder.listFiles(new TxtFilter());
 
         if (textFiles == null) {
             return SearchResult.notFound(folder, term);

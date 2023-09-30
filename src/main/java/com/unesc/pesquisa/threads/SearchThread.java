@@ -1,6 +1,7 @@
-package com.unesc.pesquisa.services;
+package com.unesc.pesquisa.threads;
 
 import com.unesc.pesquisa.model.SearchResult;
+import com.unesc.pesquisa.services.ParallelSearch;
 
 import java.io.BufferedReader;
 import java.io.File;

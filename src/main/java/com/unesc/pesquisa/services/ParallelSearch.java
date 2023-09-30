@@ -1,6 +1,9 @@
 package com.unesc.pesquisa.services;
 
 import com.unesc.pesquisa.model.SearchResult;
+import com.unesc.pesquisa.threads.SearchBackwardsThread;
+import com.unesc.pesquisa.threads.SearchThread;
+import com.unesc.pesquisa.util.TxtFilter;
 
 import java.io.File;
 import java.util.Set;
@@ -22,7 +25,7 @@ public class ParallelSearch extends AbstractSearchService {
     protected SearchResult runSearch(String folder, String term) {
         try {
             File fileFolder = new File(folder);
-            File[] textFiles = fileFolder.listFiles((dir, name) -> name.endsWith(".txt"));
+            File[] textFiles = fileFolder.listFiles(new TxtFilter());
 
             if (textFiles == null) {
                 return SearchResult.notFound(folder, term);

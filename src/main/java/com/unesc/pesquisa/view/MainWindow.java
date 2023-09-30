@@ -3,6 +3,7 @@ package com.unesc.pesquisa.view;
 import com.unesc.pesquisa.model.OnSearch;
 import com.unesc.pesquisa.model.SearchResult;
 import com.unesc.pesquisa.model.SearchType;
+import com.unesc.pesquisa.threads.IndexerThread;
 import com.unesc.pesquisa.util.TestUtils;
 
 import javax.swing.*;
@@ -47,6 +48,12 @@ public class MainWindow extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(800, 600);
         setVisible(true);
+
+        indexFiles();
+    }
+
+    private void createUIComponents() {
+        typeCombobox = new JComboBox<>(SearchType.values());
     }
 
     private void onSearch(ActionEvent event) {
@@ -178,7 +185,8 @@ public class MainWindow extends JFrame {
         }).start();
     }
 
-    private void createUIComponents() {
-        typeCombobox = new JComboBox<>(SearchType.values());
+    private void indexFiles() {
+        IndexingWindow window = new IndexingWindow(this);
+        new IndexerThread(window, folderField.getText()).start();
     }
 }
