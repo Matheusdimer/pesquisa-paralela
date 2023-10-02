@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.NumberFormat;
 
 public class MainWindow extends JFrame {
-    private static final String DEFAULT_FOLDER = "C:\\Users\\mathe\\projetos\\pesquisa-arquivos\\src\\main\\resources\\dataset";
+    private static final String DEFAULT_FOLDER = "./src/main/resources/dataset";
     private JPanel panel;
     private JTextField folderField;
     private JButton findButton;
